@@ -18,4 +18,16 @@ public class ArticleService {
 	public List<Article> getArticles() {
 		return dao.getArticles();
 	}
+
+	public void updateArticle(Article article) {
+		dao.updateArticle(article);
+	}
+
+	public Article fetchArticle(String guid) {
+		return dao.fethcArticle(guid);
+	}
+
+	public void deleteArticle(String guid) {
+		dao.deleteArticle(guid);
+	}
 }

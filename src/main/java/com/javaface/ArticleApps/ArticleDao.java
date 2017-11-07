@@ -20,4 +20,16 @@ public class ArticleDao {
 	public List<Article> getArticles() {
 		return (List<Article>) articleRepository.findAll();
 	}
+
+	public void updateArticle(Article article) {
+		articleRepository.save(article);
+	}
+
+	public Article fethcArticle(String guid) {
+		return articleRepository.findOne(guid);
+	}
+
+	public void deleteArticle(String guid) {
+		articleRepository.delete(guid);
+	}
 }
